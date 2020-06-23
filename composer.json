@@ -1,0 +1,16 @@
+{
+    "name": "JanValkenburg/php-enum",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jan Valkenburg",
+            "email": "jan.valkenburg@gmail.com"
+        }
+    ],
+    "minimum-stability": "RC",
+    "require": {
+        "php": "7.2.0"
+    }
+}
