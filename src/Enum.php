@@ -40,7 +40,6 @@ class Enum
     {
         $this->value = $value;
         $this->checkValue();
-
     }
 
     public function get(): string
@@ -61,7 +60,7 @@ class Enum
     private function checkMode(): void
     {
         if ($this->mode !== self::MODE_STRICT && $this->mode !== self::MODE_LOOSE) {
-            throw new Exception('Mode `'.$this->mode .'` not accepted, only accepting: [Enum::MODE_LOOSE, Enum::MODE_STRICT].');
+            throw new Exception('Mode `' . $this->mode . '` not accepted, only accepting: [Enum::MODE_LOOSE, Enum::MODE_STRICT].');
         }
     }
 
