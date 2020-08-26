@@ -2,9 +2,7 @@
 
 require __DIR__ . '/../src/Enum.php';
 
-$enum = new Enum(['a', 'b']);
-$enum->set('a');
+$enum = new Enum(['a', 'b'], 'c');
+$enum->set('d');
 
-function (Enum $enum) {
-    echo $enum;
-}
+echo $enum;

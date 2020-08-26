@@ -12,23 +12,26 @@ class Enum
     const MODE_LOOSE = 'loose';
 
     private $mode;
-    private $default = '';
+    private $default;
     private $accepts;
     private $value = '';
 
     /**
      * enum constructor.
      * @param array $accepts
+     * @param string $default
      * @param string $mode
      * @throws Exception
      */
     public function __construct(
         array $accepts,
+        string $default = '',
         string $mode = self::MODE_STRICT
     )
     {
         $this->accepts = $accepts;
-        $this->mode = $mode;
+        $this->default = $default;
+        $this->mode = $default ? self::MODE_LOOSE : $mode;
         $this->checkMode();
     }
 
